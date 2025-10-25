@@ -1,0 +1,17 @@
+com\dimensionopening\metrics\MetricsManager$1.class
+com\dimensionopening\gui\DimensionGUI.class
+com\dimensionopening\managers\DimensionManager.class
+com\dimensionopening\notifications\NotificationManager.class
+com\dimensionopening\commands\DimensionCommand$1.class
+com\dimensionopening\commands\DimensionTabCompleter.class
+com\dimensionopening\DimensionOpeningPlugin.class
+com\dimensionopening\metrics\MetricsManager.class
+com\dimensionopening\permissions\PermissionManager$1.class
+com\dimensionopening\notifications\NotificationManager$1.class
+com\dimensionopening\managers\ScheduleManager$1.class
+com\dimensionopening\listeners\DimensionListener$1.class
+com\dimensionopening\listeners\DimensionListener.class
+com\dimensionopening\permissions\PermissionManager.class
+com\dimensionopening\managers\ScheduleManager$2.class
+com\dimensionopening\commands\DimensionCommand.class
+com\dimensionopening\managers\ScheduleManager.class

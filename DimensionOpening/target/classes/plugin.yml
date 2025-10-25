@@ -1,0 +1,64 @@
+name: DimensionOpening
+version: 1.0.0
+main: com.dimensionopening.DimensionOpeningPlugin
+api-version: 1.21
+author: YourName
+description: A plugin to control dimension opening and closing
+website: https://github.com/yourusername/DimensionOpening
+
+commands:
+  dimension:
+    description: Control dimension opening and closing
+    usage: /dimension <open|close|status|gui> [world|nether|end]
+    permission: dimensionopening.admin
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  dimensionopening.admin:
+    description: Allows full access to dimension control
+    default: op
+    children:
+      dimensionopening.command.open: true
+      dimensionopening.command.close: true
+      dimensionopening.command.status: true
+      dimensionopening.command.gui: true
+      dimensionopening.command.schedule: true
+      dimensionopening.bypass: true
+  
+  dimensionopening.bypass:
+    description: Allows bypassing dimension restrictions
+    default: op
+  
+  # Dimension-specific access permissions
+  dimensionopening.access.overworld:
+    description: Allows access to the Overworld even when closed
+    default: false
+  
+  dimensionopening.access.nether:
+    description: Allows access to the Nether even when closed
+    default: false
+  
+  dimensionopening.access.end:
+    description: Allows access to the End even when closed
+    default: false
+  
+  # Command-specific permissions
+  dimensionopening.command.open:
+    description: Allows opening dimensions
+    default: op
+  
+  dimensionopening.command.close:
+    description: Allows closing dimensions
+    default: op
+  
+  dimensionopening.command.status:
+    description: Allows checking dimension status
+    default: true
+  
+  dimensionopening.command.gui:
+    description: Allows using the dimension GUI
+    default: op
+  
+  dimensionopening.command.schedule:
+    description: Allows managing scheduled dimension changes
+    default: op

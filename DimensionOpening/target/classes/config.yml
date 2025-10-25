@@ -1,0 +1,70 @@
+# DimensionOpening Plugin Configuration
+# This file stores the current state of dimensions and plugin settings
+
+# Dimension states (true = open, false = closed)
+dimensions:
+  overworld:
+    open: true
+  nether:
+    open: true
+  end:
+    open: true
+
+# Plugin settings
+settings:
+  # Whether to broadcast dimension state changes to all players
+  broadcast_changes: true
+  
+  # Whether operators can bypass dimension restrictions
+  ops_bypass_restrictions: true
+
+# Notification settings
+notifications:
+  # Show welcome message with dimension status when players join
+  welcome_message: true
+  
+  # Notify admins when players try to access closed dimensions
+  admin_notifications: true
+  
+  # Use boss bars for notifications
+  boss_bars: true
+  
+  # Use title/subtitle notifications
+  titles: true
+  
+  # Play sound effects for notifications
+  sounds: true
+  
+  # Custom messages (use & for color codes)
+  messages:
+    dimension_closed: "&cThe %dimension% dimension is currently closed!"
+    dimension_opened: "&aThe %dimension% dimension is now accessible!"
+    no_permission: "&cYou don't have permission to use this command!"
+    ops_only: "&cOnly operators can use this command!"
+    portal_blocked: "&eThe portal is inactive until an administrator opens the dimension."
+
+# Scheduled dimension control (optional)
+# Time is in ticks (20 ticks = 1 second, 24000 ticks = 1 Minecraft day)
+schedules:
+  # Example: Close Nether at night, open during day
+  nether_night_close:
+    enabled: false
+    dimension: "nether"
+    action: "close"
+    delay_ticks: 13000    # Start at night (13000 ticks = 10:30 PM)
+    interval_ticks: 24000 # Repeat every Minecraft day
+  
+  nether_day_open:
+    enabled: false
+    dimension: "nether"
+    action: "open"
+    delay_ticks: 1000     # Start at morning (1000 ticks = 6:30 AM)
+    interval_ticks: 24000 # Repeat every Minecraft day
+  
+  # Example: Close End dimension every 2 hours real time
+  end_periodic_close:
+    enabled: false
+    dimension: "end"
+    action: "close"
+    delay_ticks: 144000   # 2 hours delay
+    interval_ticks: 144000 # Every 2 hours (144000 ticks = 2 hours)
